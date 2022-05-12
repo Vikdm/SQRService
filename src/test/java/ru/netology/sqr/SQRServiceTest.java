@@ -1,8 +1,8 @@
 package ru.netology.sqr;
 
-public class SQRservice {
+public class SQRServiceTest {
 
-    public int Calc(int lim1, int lim2) {
+    public int Calculate(int lim1, int lim2) {
 
         int count = 0;
 
@@ -12,7 +12,7 @@ public class SQRservice {
                 count++;
             }
         }
-    return count;
+        return count;
     }
 }
 
