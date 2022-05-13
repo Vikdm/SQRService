@@ -1,18 +1,17 @@
 package ru.netology.sqr;
 
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+
 public class SQRServiceTest {
 
-    public int Calculate(int lim1, int lim2) {
+    @ParameterizedTest
+    @CsvFileSource(resources = "/SQRServiceTest.csv")
 
-        int count = 0;
+    public void test(int lim1, int lim2) {
 
-        for (int i = 10; i < 100; i++) {
-            int x = i * i;
-            if (x >= lim1 && x <= lim2) {
-                count++;
-            }
-        }
-        return count;
+        SQRService service = new SQRService();
+        int x = service.Calculate(lim1, lim2);
+        System.out.println("Tаких чисел = " + x);
     }
 }
-
